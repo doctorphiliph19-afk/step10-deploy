@@ -10,6 +10,8 @@ const app = express()
 //  Middleware
 app.use(cors()) // allow frontend to connect
 app.use(express.json())
+app.use(express.static('dist'))
+app.use(express.static('build'))
 
 // Morgan (log POST body)
 morgan.token('body', (req) => {
